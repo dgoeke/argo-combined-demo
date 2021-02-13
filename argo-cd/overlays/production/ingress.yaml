@@ -3,11 +3,14 @@ kind: Ingress
 metadata:
   name: argocd-server
   annotations:
-    ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
     ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  tls:
+  - hosts:
+    - argo-cd.dgoeke.io
+    secretName: argo-cd-prod
   rules:
   - http:
       paths:
