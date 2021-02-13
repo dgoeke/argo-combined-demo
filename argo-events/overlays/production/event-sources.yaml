@@ -17,7 +17,7 @@ spec:
         endpoint: /argo-combined-app
         port: "12000"
         method: POST
-        url: http://webhook.dgoeke.io
+        url: https://webhook.dgoeke.io
       events:
         - "*"
       apiToken:
