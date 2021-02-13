@@ -23,7 +23,6 @@ spec:
       apiToken:
         name: github-access
         key: token
-      insecure: true
       active: true
       contentType: json
 
