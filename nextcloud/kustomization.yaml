@@ -1,2 +1,5 @@
 resources:
+- namespace.yaml
 - redis.yaml
+- db-secrets.yaml
+- nextcloud.yaml
